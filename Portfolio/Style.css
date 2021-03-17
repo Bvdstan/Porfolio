@@ -1,0 +1,872 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Tous les écrans */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  /* Largeur d'écran entre 320 et 1000px  */
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+    /* Largeur d'écran supérieur à 1000px  */
+  @media screen and (min-width: 1000px) {
+    html {
+      font-size: 22px;
+    }
+  }
+
+body{
+ text-align: center;
+ margin: 0px;
+ padding: 0px;
+} 
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+section,
+ footer{
+    padding: 20px;
+}
+
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(253, 57, 31);
+    border: 31px none #000000;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(253, 57, 31);
+}
+::-webkit-scrollbar-thumb:active {
+    background: #ff0000;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+::-webkit-scrollbar-track:active {
+    background: #000000;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+/*scrollbar fin*/
+
+/*header*/
+header{
+    height: 100vh;
+    background-image: url(Red\ Island\ Wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-text{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;    
+    font-variant: small-caps;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/*navbar*/
+nav{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(255, 157, 157, 0.932);
+    position: fixed;
+    z-index: 2;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Oswald', sans-serif;
+    background: rgb(253, 57, 31);
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+nav ul li {
+    transition: all 0.5s ease;
+    margin: 0.5rem;
+}
+
+nav ul li:hover{
+    background:  rgb(83, 88, 99);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.637);
+}
+
+.menu {
+    display: block;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+    line-height:50px;;
+    text-decoration:none;
+    text-align:center;
+}
+
+.menu:hover {
+    color:rgb(235, 139, 37);
+}
+
+
+/*navbar fin*/
+/*header fin*/
+
+/*À propos*/
+#Àpropos{
+    background-color: rgba(83, 88, 99, 0.856);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.637);
+    z-index: 1;
+    overflow: overlay;
+}
+
+#Àpropos h1{
+    color:rgb(102, 13, 1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.596);
+    font-family: 'Raleway', sans-serif;
+}
+
+#Àpropos p{
+    color:rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.pulse {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 50px;
+    margin: 15px 15px 0;
+    text-align: center;
+    transition: 1s;
+    width: 150px;
+}
+
+.pulse:hover {
+    background-color: rgb(102, 13, 1);
+    border: 1px solid rgba(102, 13, 1, .6);
+    animation: pulse 1.8s infinite;
+    transition: 1s ease;
+}
+
+.pulse p{
+    margin: 0px;
+}
+@keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+        }
+    
+        50% {
+          box-shadow: 0 0 0 10px rgba(12, 176, 0, 0);
+        }
+    
+        100% {
+          box-shadow: 0 0 0 0 rgba(12, 176, 0, 0);
+        }
+    
+      }
+/*À propos fin*/
+
+/*Compétences*/
+#Compétences{
+    background-color:  rgb(102, 13, 1);
+}
+
+#SkillBox {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    padding: 10px; 
+}
+.SkillBar {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    background: rgba(17, 17, 17, .3);
+    margin: 20px auto;
+}
+/*Skillbar Développement*/
+#Skill-HTML {
+    width: 90%;
+    animation: Animate-HTML 4s;
+    -webkit-animation: Animate-HTML 4s;
+    -moz-animation: Animate-HTML 4s;
+    -o-animation: Animate-HTML 4s;
+    height: 50px;
+    position: absolute;
+    background-color:rgb(253, 57, 31);
+}
+@keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-webkit-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-moz-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}@-o-keyframes Animate-HTML {
+    from {
+    width: 10px;
+}
+to {
+    width: 90%}
+}
+#Skill-CSS {
+    animation: Animate-CSS 5s;
+    -webkit-animation: Animate-CSS 5s;
+    -moz-animation: Animate-CSS 5s;
+    -o-animation: Animate-CSS 5s;
+    width: 70%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-webkit-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-moz-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-o-keyframes Animate-CSS {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+#Skill-JavaScript {
+    animation: Animate-JavaScript 5s;
+    -webkit-animation: Animate-JavaScript 5s;
+    -moz-animation: Animate-JavaScript 5s;
+    -o-animation: Animate-JavaScript 5s;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 30%}
+}@-webkit-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 30%}
+}@-moz-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 30%}
+}@-o-keyframes Animate-JavaScript {
+    from {
+    width: 10px;
+}
+to {
+    width: 30%}
+}
+#Skill-MySQL {
+    animation: Animate-MySQL 4s;
+    -webkit-animation: Animate-MySQL 4s;
+    -moz-animation: Animate-MySQL 4s;
+    -o-animation: Animate-MySQL 4s;
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-MySQL {
+    from {
+    width: 10px;
+}
+to {
+    width: 40%}
+}@-webkit-keyframes Animate-MySQL {
+    from {
+    width: 10px;
+}
+to {
+    width: 40%}
+}@-moz-keyframes Animate-MySQL {
+    from {
+    width: 10px;
+}
+to {
+    width: 40%}
+}@-o-keyframes Animate-MySQL {
+    from {
+    width: 10px;
+}
+to {
+    width: 40%}
+}
+#Skill-PHP {
+    animation: Animate-PHP 4s;
+    -webkit-animation: Animate-PHP 4s;
+    -moz-animation: Animate-PHP 4s;
+    -o-animation: Animate-PHP 4s;
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-webkit-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-moz-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-o-keyframes Animate-PHP {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}
+/*Skillbar Développement fin*/
+
+/*Skillbar Frameworks*/
+#Skill-Bootstrap {
+    animation: Animate-Bootstrap 4s;
+    -webkit-animation: Animate-Bootstrap 4s;
+    -moz-animation: Animate-Bootstrap 4s;
+    -o-animation: Animate-Bootstrap 4s;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-Bootstrap {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+#Skill-JQuery {
+    animation: Animate-JQuery 4s;
+    -webkit-animation: Animate-JQuery 4s;
+    -moz-animation: Animate-JQuery 4s;
+    -o-animation: Animate-JQuery 4s;
+    width: 25%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-JQuery {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-webkit-keyframes Animate-JQuery {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-moz-keyframes Animate-JQuery {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}@-o-keyframes Animate-JQuery {
+    from {
+    width: 10px;
+}
+to {
+    width: 25%}
+}
+#Skill-Symfony {
+    animation: Animate-Symfony 4s;
+    -webkit-animation: Animate-Symfony 4s;
+    -moz-animation: Animate-Symfony 4s;
+    -o-animation: Animate-Symfony 4s;
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-Symfony {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-webkit-keyframes Animate-Symfony {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-moz-keyframes Animate-Symfony {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}@-o-keyframes Animate-Symfony {
+    from {
+    width: 10px;
+}
+to {
+    width: 60%}
+}
+/*Skillbar Frameworks fin*/
+
+/*Skillbar Logiciels*/
+#Skill-Office {
+    animation: Animate-Office 4s;
+    -webkit-animation: Animate-Office 4s;
+    -moz-animation: Animate-Office 4s;
+    -o-animation: Animate-Office 4s;
+    width: 80%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-Office {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-webkit-keyframes Animate-Office {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-moz-keyframes Animate-Office {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+}@-o-keyframes Animate-Office {
+    from {
+    width: 10px;
+}
+to {
+    width: 80%}
+
+}
+/*Skillbar Logiciels fin*/
+
+/*Skillbar Langue*/
+#Skill-Français {
+    animation: Animate-Français 4s;
+    -webkit-animation: Animate-Français 4s;
+    -moz-animation: Animate-Français 4s;
+    -o-animation: Animate-Français 4s;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-Français {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-webkit-keyframes Animate-Français {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-moz-keyframes Animate-Français {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}@-o-keyframes Animate-Français {
+    from {
+    width: 10px;
+}
+to {
+    width: 100%}
+}
+#Skill-Anglais {
+    animation: Animate-Anglais 4s;
+    -webkit-animation: Animate-Anglais 4s;
+    -moz-animation: Animate-Anglais 4s;
+    -o-animation: Animate-Anglais 4s;
+    width: 70%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(253, 57, 31);
+}
+@keyframes Animate-Anglais {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-webkit-keyframes Animate-Anglais {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-moz-keyframes Animate-Anglais {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}@-o-keyframes Animate-Anglais {
+    from {
+    width: 10px;
+}
+to {
+    width: 70%}
+}
+/*Skillbar Langue fin*/
+.Skill-Area {
+    z-index: 1;
+    float: left;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-shadow: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+.PercentText {
+    z-index: 1;
+    position: relative;
+    padding-right: 15px;
+    margin-top: 15px;
+    float: right;
+    text-shadow: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+/*Compétences fin*/
+
+/*Parcours*/
+#Parcours{
+    width: 100%;
+    background-image: url(Red\ Tree\ Wallpaper.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    box-shadow: 0 0 20px black;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#Parcours h1{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+#Parcours p{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+/*leaf animations*/
+#leaves {
+    width:100%;
+    padding: 10;
+}
+
+#leaves i {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(to bottom right, #990000, #560000);
+    transform: skew(20deg);
+    border-radius: 5% 40% 70%;
+    box-shadow: inset 0px 0px 1px rgba(34, 34, 34, 0);
+    border: 1px solid rgba(51, 51, 51, 0);
+    z-index: 1;
+    -webkit-animation: falling 5s 0s infinite;
+}
+
+#leaves i:nth-of-type(2n) { 
+    -webkit-animation: falling2 5s 0s infinite; 
+}
+#leaves i:nth-of-type(3n) { 
+    -webkit-animation: falling3 5s 0s infinite; 
+}
+
+#leaves i:before {
+  position: absolute;
+  content: '';
+  top: 117px;
+  right: 9px;
+  height: 27px;
+  width: 32px;
+  transform: rotate(49deg);
+  border-radius: 0% 15% 15% 0%;
+  border-top: 1px solid rgba(34, 34, 34, 0);
+  border-bottom: 1px solid rgba(34, 34, 34, 0);
+  border-left: 0px solid rgba(34, 34, 34, 0);
+  border-right: 1px solid rgba(34, 34, 34, 0);
+  background: linear-gradient( rgb(100, 0, 0), #560000);
+  z-index: 1;
+}
+
+#leaves i:after {
+  content: '';
+  height: 125px;
+  width: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,0,0,0));
+  display: block;
+  transform: rotate(125deg);
+  position: absolute;
+  left: 85px;
+  border-radius:50%;
+}
+
+#leaves i:nth-of-type(n)    { 
+    height:23px; width:30px; 
+}
+#leaves i:nth-of-type(n):before { 
+    width:7px; height:5px; top:17px; right:1px; 
+}
+#leaves i:nth-of-type(n):after { 
+    width:2px; height:17px; left: 12px; top:0px; 
+}
+
+#leaves i:nth-of-type(2n+1)    { 
+    height:11px; width:16px; 
+}
+#leaves i:nth-of-type(2n+1):before { 
+    width:4px; height:3px; top:7px; right:0px; 
+}
+#leaves i:nth-of-type(2n+1):after { 
+    width:2px; height:6px; left: 5px; top:1px; 
+}
+
+#leaves i:nth-of-type(3n+2)  { 
+    height:17px; width:23px; 
+}
+#leaves i:nth-of-type(3n+2):before  { 
+    height:4px; width:4px; top:12px; right:1px; 
+}
+#leaves i:nth-of-type(3n+2):after  { 
+    height:10px; width:2px; top:1px; left:8px; 
+}
+
+#leaves i:nth-of-type(n)   { 
+    -webkit-animation-delay: 1.9s;
+}
+#leaves i:nth-of-type(2n)  { 
+    -webkit-animation-delay: 3.9s;
+}
+#leaves i:nth-of-type(3n)  { 
+    -webkit-animation-delay: 2.3s;
+}
+#leaves i:nth-of-type(4n)  { 
+    -webkit-animation-delay: 4.4s;
+}
+#leaves i:nth-of-type(5n)  { 
+    -webkit-animation-delay: 5s;  
+}
+#leaves i:nth-of-type(6n)  { 
+    -webkit-animation-delay: 3.5s;
+}
+#leaves i:nth-of-type(7n)  { 
+    -webkit-animation-delay: 2.8s;
+}
+#leaves i:nth-of-type(8n)  { 
+    -webkit-animation-delay: 1.5s;
+}
+#leaves i:nth-of-type(9n)  { 
+    -webkit-animation-delay: 3.3s;
+}
+#leaves i:nth-of-type(10n) { 
+    -webkit-animation-delay: 2.5s;
+}
+#leaves i:nth-of-type(11n) { 
+    -webkit-animation-delay: 1.2s;
+}
+#leaves i:nth-of-type(12n) { 
+    -webkit-animation-delay: 4.1s;
+}
+#leaves i:nth-of-type(13n) { 
+    -webkit-animation-delay: 1s;  
+}
+#leaves i:nth-of-type(14n) { 
+    -webkit-animation-delay: 4.7s;
+}
+#leaves i:nth-of-type(15n) { 
+    -webkit-animation-delay: 3s;  
+}
+#leaves i:nth-of-type(n)    { 
+    background: linear-gradient(to bottom right, #990000, #560000); 
+}
+#leaves i:nth-of-type(2n+2)  { 
+    background: linear-gradient(to bottom right, #990000, #560000); 
+}
+#leaves i:nth-of-type(4n+1)  { 
+    background: linear-gradient(to bottom right, rgb(153, 82, 0), #563f00); 
+}
+#leaves i:nth-of-type(n)    {
+     opacity: .7;
+}
+#leaves i:nth-of-type(3n+1)  { 
+    opacity: .5;
+}
+#leaves i:nth-of-type(3n+2)  { 
+    opacity: .3;
+}
+#leaves i:nth-of-type(n)    {
+    transform: rotate(180deg);
+}
+#leaves i:nth-of-type(n) { 
+    -webkit-animation-timing-function:ease-in-out;
+}
+
+@-webkit-keyframes falling {
+    
+    0% {
+        -webkit-transform:
+            translate3d(300,0,0)
+            rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-150px,350px,0)
+            rotate(90deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes falling3 {
+     0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(-20deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-230px,340px,0)
+            rotate(-70deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes falling2 {
+     0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(90deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-400px,340px,0)
+            rotate(0deg);
+        opacity: 0;
+    }
+}
+/*leaf animations fin*/
+
